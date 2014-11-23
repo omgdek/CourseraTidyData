@@ -31,11 +31,30 @@ For this script I have elected to use dplyr and tidyr to leverage their power in
   * y_train.txt
   * X_train.txt
  
-####Step 4: Merge raw tables into the separate test and train data
+####Step 4: Tidy and merge raw tables (Completes Requirement 1)
 - Using column binding, (cbind) merge raw sets into two sets of data (test and train)
   * *Activies occur seperate before combining to keep records per user lined up correctly*
-- Using tidyr, gather to lengthen and create tidy dataset
-- remove "V" from featureid column for use in joining later to feature dimension table
- 
+- Using tidyr, gather to lengthen and create tidy datasets for each
+- Remove "V" from featureid column for use in joining later to feature dimension table
+- Using row binding (rbind), merge test and train data into one tidy dataset **(Req 1)**
+
 ####Step 5: Remove unneeded objects and wasted memory
 - Use remove function to remove objects
+
+####Step 6: Filter for Mean and STD and join to discriptive dimension tables (Completes Requirement 2 & 3)
+- Use inner_join to join to features and activity dimension tables **(Req 3)**
+  * *Replaces numeric representations of activies with descriptive versions. Examples: feature:1=tBodyAcc-mean()-X and activity:1=WALKING*
+- Use filter to return only observations containing "-mean()-" and "-std()-" **(Req 2)**
+
+####Step 7: Complete final cleanup and renaming of variables (Completes Requirement 4)
+- Use select to return only final data set variables (subjectid, measurement, activity, value) **(Req 4)**
+  * subjectid: Unique ID for each test subject. Variable name identifies that it is the ID value for subject.
+  * measurement: Type of measurement (sensor, axis, type (mean, std)).
+  * activity: Descriptive type of activity occuring (WALKING, STANDING).
+  * value: The observed value. (This column is later renamed to average after summarizing in step 5)
+- Use separate to split measurement into other columns for further analysis (Not used in final output. For personal analysis.)
+- 
+####Step 8: Summarize with mean() and write to file for submission (Completes Requirement 5)
+- Use group_by to group on measurement, activity, and subjectid
+- Use summarise to calculate average using mean() function. Value column renamed to Average. **(Req 5)**
+- Use write.table to output as tidydata.txt with row.name = FALSE **(Req 5)**
