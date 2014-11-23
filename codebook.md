@@ -56,3 +56,5 @@ Numeric representation for each unique test subject
 ###average
 Summarization of all signals for each measurement, activity, and subject id.
 - Calculation used is mean()
+
+==================================================================
