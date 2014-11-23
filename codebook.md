@@ -18,7 +18,8 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ==================================================================
 ##Data Dictionary
 
-###measurement 
+###measurement
+Describes source (accelerometer, gyroscope) and type of measure for each value.
 - structure - [prefix][measure][calculation][axis]
   * Example - fBodyAcc-mean()-X
 - prefix
@@ -38,9 +39,19 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
   * Y - Movement signal along Y axis
   * Z - Movement signal along Z axis
 
-
 ###activity
+Describes activity that test subject is performing
+- WALKING
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING
 
 ###subjectid
+Numeric representation for each unique test subject
+- 1:30
 
 ###average
+Summarization of all signals for each measurement, activity, and subject id.
+- Calculation used is mean()
