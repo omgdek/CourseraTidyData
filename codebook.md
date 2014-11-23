@@ -19,7 +19,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ##Data Dictionary
 
 ###measurement 
--structure - <prefix><measure><calculation><axis>
+-structure - [prefix][measure][calculation][axis]
   * Example: fBodyAcc-mean()-X
 -prefix
   * t - Time domain signals captured at constant rate of 50Hz
