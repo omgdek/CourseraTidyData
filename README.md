@@ -53,7 +53,7 @@ For this script I have elected to use dplyr and tidyr to leverage their power in
   * activity: Descriptive type of activity occurring (WALKING, STANDING).
   * value: The observed value. (This column is later renamed to average after summarizing in step 5)
 - Use separate to split measurement into other columns for further analysis (Not used in final output. For personal analysis.)
-- 
+
 ####Step 8: Summarize with mean() and write to file for submission (Completes Requirement 5)
 - Use group_by to group on measurement, activity, and subjectid
 - Use summarise to calculate average using mean() function. Value column renamed to Average. **(Req 5)**
