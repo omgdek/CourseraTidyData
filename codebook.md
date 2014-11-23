@@ -1,4 +1,4 @@
-#Code Book - tidydata.txt
+#Code Book
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
@@ -16,7 +16,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 *For further details on raw dataset please refer to documentation contained within ./UCI HAR Dataset that is downloaded and created through the run_analysis.R script.*
 ==================================================================
-##Data Dictionary
+##Data Dictionary - tidydata.txt
 
 ###measurement
 Describes source (accelerometer, gyroscope) and type of measure for each value.
