@@ -19,24 +19,24 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ##Data Dictionary
 
 ###measurement 
--structure - [prefix][measure][calculation][axis]
-  * Example: fBodyAcc-mean()-X
--prefix
+- structure - [prefix][measure][calculation][axis]
+  * Example - fBodyAcc-mean()-X
+- prefix
   * t - Time domain signals captured at constant rate of 50Hz
   * f - Fast Fourier Transform (FFT) applied to signals
--measure
+- measure
   * BodyAcc - Accelerometer signal
   * BodyAccJerk - Acceleration and angular velocity "Jerk" signal (Accelerometer signal)
   * BodyGyro - Gyroscope signal
   * BodyGyroJerk - Acceleration and angular velocity "Jerk" signal (Gyroscope signal)
   * GravityAcc - Accelerometer gravity acceleration signal
- -calculation
-   * mean() - Mean value
-   * std() - Standard deviation
- -axis
-   * X - Movement signal along X axis
-   * Y - Movement signal along Y axis
-   * Z - Movement signal along Z axis
+- calculation
+  * mean() - Mean value
+  * std() - Standard deviation
+- axis
+  * X - Movement signal along X axis
+  * Y - Movement signal along Y axis
+  * Z - Movement signal along Z axis
 
 
 ###activity
